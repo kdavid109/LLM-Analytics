@@ -1,0 +1,23 @@
+sources:
+  - name: raw
+    database: LLM_ANALYSIS
+    schema: PUBLIC
+    description: Raw LLM performance data loaded from CSV
+    tables:
+      - name: ai_models_performance
+        description: Raw table containing LLM model performance metrics and pricing
+        columns:
+          - name: Model
+            description: Name of the LLM model
+          - name: Context Window
+            description: Maximum context window size
+          - name: Creator
+            description: Company or organization that created the model
+          - name: Intelligence Index
+            description: Performance/intelligence score of the model
+          - name: Price (Blended USD/1M Tokens)
+            description: Cost per 1 million tokens in USD
+          - name: Speed(median token/s)
+            description: Median token generation speed
+          - name: Latency (First Answer Chunk /s)
+            description: Time to first response chunk in seconds
